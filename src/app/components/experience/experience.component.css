@@ -1,0 +1,35 @@
+/* .main {
+    background: #020024;
+    color: #fff;
+} */
+
+.experience__content {
+    background: #020024;
+    color: #fff;
+    padding: 2% 0;
+    border-bottom: 1px solid;
+}
+
+.experience__content>li {
+    margin-left: 15%;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.title {
+    padding-left: 5% !important;
+    margin: 0;
+}
+
+.techextensor>a {
+    text-decoration: none;
+    margin-left: 15%;
+    font-size: 20px;
+    font-weight: bold;
+    background: #020024;
+    color: #fff;
+}
+
+.techextensor>a:hover {
+    border-bottom: 1px solid gray;
+}

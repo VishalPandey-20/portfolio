@@ -1,0 +1,43 @@
+<div class="form__main__div d-flex justify-content-center  mt-5">
+    <form class="mt-5" [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="studentName" class="form-label">Enter your Name</label>
+            <input type="text" class="form-control" id="studentName" placeholder="Enter your Name" formControlName="studentName">
+            <div *ngIf="checkError['studentName'].touched && checkError['studentName'].invalid">
+                <small *ngIf="checkError['studentName'].errors?.['required']">Name is required field.</small>
+                <small *ngIf="checkError['studentName'].errors?.['minlength']">Name is too short..!</small>
+                <small *ngIf="checkError['studentName'].errors?.['pattern']">Please enter valid name..!</small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Enter your Email address</label>
+            <input type="email" autocomplete="off" class="form-control" id="email" placeholder="email@gmail.com" formControlName="email">
+            <div *ngIf="checkError['email'].touched && checkError['email'].invalid">
+                <small *ngIf="checkError['email'].errors?.['required']">Email is required field.</small>
+                <small *ngIf="checkError['email'].errors?.['email']">Please Enter a valid email.!.!</small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Enter your Phone Number</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="87656767689" formControlName="phone">
+            <div *ngIf="checkError['phone'].touched && checkError['phone'].invalid">
+                <small *ngIf="checkError['phone'].errors?.['required']">Phone number is required.</small>
+                <small *ngIf="checkError['phone'].errors?.['pattern']">Please Enter a valid Phone number...!</small>
+                <small *ngIf="checkError['phone'].errors?.['minlength']">Number is too short.</small>
+                <small *ngIf="checkError['phone'].errors?.['maxlength']">Number is too large..</small>
+            </div>
+        </div>
+         <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Enter your Password</label>
+            <input type="password" class="form-control" id="inputPassword" formControlName="password">
+            <div *ngIf="checkError['password'].touched && checkError['password'].invalid">
+                <small *ngIf="checkError['password'].errors?.['required']">Password is required.</small>
+                <small *ngIf="checkError['password'].errors?.['minlength']">Password is too short..!</small>
+                <small *ngIf="checkError['password'].errors?.['maxlength']">Password is too large...!</small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <button type="submit" [disabled]="studentForm.invalid" class="btn btn-success">Success</button>
+        </div>
+    </form>
+</div>

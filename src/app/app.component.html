@@ -1,0 +1,24 @@
+<section class="border-bottom pb-2 sticky-top" style="background-color: #fff;">
+  <div class="d-flex align-items-center justify-content-between mt-3 mx-3">
+    <div>
+      <img class="portfolio" (click)="home()" src="assets/portfolio-image.png" alt="I am not comming">
+    </div>
+    <div class="example-button-row">
+      <button class="mx-2" mat-raised-button color="primary" (click)="home()">Home</button>
+      <button class="mx-2" mat-raised-button color="primary" (click)="about()">About Me</button>
+      <button class="mx-2" mat-raised-button color="primary" (click)="isOpen()">Contect Me</button>
+      <button class="mx-2" mat-raised-button color="primary" (click)="workExperience()">Work Experience</button>
+      <button class="mx-2" mat-raised-button color="primary" (click)="form()">Form</button>
+    </div>
+  </div>
+</section>
+<router-outlet></router-outlet>
+
+<footer class="footer">
+  <div class="d-flex align-items-center justify-content-between">
+    <a mat-flat-button routerLink="/home">Home</a>
+    <a mat-flat-button routerLink="/about-me">About Me</a>
+    <a mat-flat-button routerLink="/contect-me">Contect Me</a>
+    <a mat-flat-button routerLink="/experience">Work Experience</a>
+  </div>
+</footer>

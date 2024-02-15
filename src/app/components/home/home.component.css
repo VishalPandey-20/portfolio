@@ -1,0 +1,12 @@
+.self-image {
+    width: 20vw;
+    height: 35vh;
+    border-radius: 50%;
+}
+
+.portfolio__container {
+    background: #020024;
+    color: #fff;
+    padding: 10px 5%;
+    border-bottom: 1px solid #fff;
+}

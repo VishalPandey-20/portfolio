@@ -1,0 +1,29 @@
+.portfolio {
+    width: 20vw;
+    height: 10vh;
+}
+
+.portfolio:hover {
+    cursor: pointer;
+    transform: perspective(17px);
+    border-radius: 30px;
+}
+
+.footer {
+    /* height: 15vh; */
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 60%, rgba(0, 212, 255, 1) 180%, rgba(10, 5, 38, 1) 180%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3% 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px solid gray;
+    color: gray;
+}
